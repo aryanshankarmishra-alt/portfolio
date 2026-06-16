@@ -31,6 +31,18 @@ export function ProjectsSection() {
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
             A collection of things I have shipped. Check it out!
           </h2>
+          <p className="mx-auto mt-3 max-w-xl text-pretty text-muted-foreground">
+            Explore more of my work on{" "}
+            <a
+              href="https://github.com/aryanshankarmishra-alt"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              GitHub
+            </a>
+            .
+          </p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
