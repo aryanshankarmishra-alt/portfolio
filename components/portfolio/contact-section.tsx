@@ -1,10 +1,9 @@
 import { Mail, ArrowUpRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { GithubIcon, LinkedinIcon } from "@/components/portfolio/brand-icons"
+import { LinkedinIcon } from "@/components/portfolio/brand-icons"
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/aryanshankarmishra-alt", icon: GithubIcon },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/aryan-a-mishra/", icon: LinkedinIcon },
   { label: "Email", href: "mailto:aryanshankarmishra@gmail.com", icon: Mail },
 ]
