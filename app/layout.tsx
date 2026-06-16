@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -10,9 +11,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Founder @ Proxilytics | VP of Data Science @ aivon.ai',
+  title: "Aryanshankar Mishra | Founder & Data Scientist",
   description:
-    'Building humane, reliable technology that is completely invisible to the user. I build systems that actually work.',
+    'Founder @ Proxilytics and VP of Data Science @ aivon.ai. I build humane, reliable technology that is completely invisible to the user.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -49,10 +50,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${geistSans.variable} ${geistMono.variable} bg-background`}
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

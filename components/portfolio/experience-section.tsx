@@ -1,19 +1,24 @@
+import { Briefcase, LineChart, Database } from "lucide-react"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const roles = [
   {
     company: "Proxilytics",
     role: "Founder",
+    icon: Briefcase,
     description: "Building tech solutions that optimize daily operations for local businesses.",
   },
   {
     company: "aivon.ai",
     role: "VP of Data Science",
+    icon: LineChart,
     description: "Leading the data architecture and strategy for our core product.",
   },
   {
     company: "Mosaic Cakes",
     role: "Data Analytics Intern",
+    icon: Database,
     description:
       "Optimized e-commerce data structures, reducing query latency and enabling seamless product migration.",
   },
@@ -21,19 +26,32 @@ const roles = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="border-b border-border">
-      <div className="mx-auto w-full max-w-3xl px-6 py-24">
-        <h2 className="mb-8 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          Experience
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <section id="experience" className="scroll-mt-16 bg-secondary/30">
+      <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary">Experience</p>
+          <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+            What can I do?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-pretty text-muted-foreground">
+            A brief, non-technical summary of the roles where I have shipped real work.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {roles.map((item) => (
-            <Card key={item.company} className="border-border bg-card">
+            <Card
+              key={item.company}
+              className="group border-border bg-card transition-colors hover:border-primary/50"
+            >
               <CardHeader>
-                <CardDescription className="font-mono text-xs uppercase tracking-wider">
+                <div className="flex size-11 items-center justify-center rounded-xl bg-accent text-accent-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <item.icon className="size-5" />
+                </div>
+                <CardTitle className="mt-4 text-lg">{item.company}</CardTitle>
+                <CardDescription className="font-medium text-primary">
                   {item.role}
                 </CardDescription>
-                <CardTitle className="text-lg text-foreground">{item.company}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>

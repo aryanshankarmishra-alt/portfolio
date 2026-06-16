@@ -1,29 +1,15 @@
 export function AboutSection() {
   return (
-    <section id="about" className="relative overflow-hidden border-b border-border">
-      {/* Subtle modern grid background */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, var(--foreground) 1px, transparent 1px), linear-gradient(to bottom, var(--foreground) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 0%, transparent 0%, var(--background) 75%)",
-        }}
-      />
-      <div className="relative mx-auto w-full max-w-3xl px-6 py-24">
-        <h2 className="mb-8 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          About
-        </h2>
-        <div className="space-y-5 text-lg leading-relaxed text-foreground/90">
+    <section id="about" className="relative scroll-mt-16 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-grid bg-grid-fade opacity-40" aria-hidden="true" />
+      <div className="relative mx-auto w-full max-w-3xl px-4 py-20 sm:px-6 md:py-28">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary">About Me</p>
+          <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+            Who am I?
+          </h2>
+        </div>
+        <div className="mt-10 space-y-5 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
           <p>
             I used to think the best engineers built the most complicated systems. I was wrong. The
             best engineers build systems that actually work.
@@ -34,7 +20,7 @@ export function AboutSection() {
             serious discipline. Spending years earning a 3rd Degree Black Belt in Taekwondo gave me
             plenty of that.
           </p>
-          <p className="text-foreground">
+          <p className="font-medium text-foreground">
             I am not here to pad a resume with busywork. I am here to build things that matter.
           </p>
         </div>
