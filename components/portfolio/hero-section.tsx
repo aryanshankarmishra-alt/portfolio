@@ -22,7 +22,7 @@ export function HeroSection() {
             Founder & Data Scientist
           </p>
           <h1 className="mt-3 text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            Hey, I&apos;m Aryanshankar.
+            Hey, I&apos;m Aryan Mishra.
           </h1>
           <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
             I build humane, reliable technology that is completely invisible to the user. Founder

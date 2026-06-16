@@ -1,52 +1,62 @@
-import { Briefcase, Award, BookOpen, Users } from "lucide-react"
+import { TrendingUp, Award, BookOpen, Heart, Medal, Zap } from "lucide-react"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 
 const leadershipItems = [
   {
-    icon: Briefcase,
+    icon: TrendingUp,
     title: "President, FinTech Club",
-    detail: "Leading club operations and initiatives, backed by a formal FinTech Certification.",
+    detail: "Scaled membership by 10x & established dedicated Executive Board of Finance.",
   },
   {
     icon: Award,
     title: "Senior Council Chair, FBLA",
-    detail: "Directing chapter strategy and competitive preparation.",
+    detail: "Directed competition strategy and operations across chapter initiatives.",
+  },
+  {
+    icon: Medal,
+    title: "Vice President, National Honor Society",
+    detail: "Managed chapter initiatives and fostered academic leadership culture.",
   },
   {
     icon: BookOpen,
-    title: "Researcher, The Institute of New Frontiers",
-    detail: "Engaged in independent research and analysis during the 2026 cycle.",
+    title: "4x FBLA National Qualifier",
+    detail: "State 2nd place in Data Analysis. Demonstrated excellence in competitive strategy.",
   },
   {
-    icon: Users,
+    icon: Zap,
+    title: "Research & Analysis",
+    detail: "NYC Air Quality Data Analysis (Sept 2024–Mar 2025). Evaluated air quality trends following Canadian wildfires.",
+  },
+  {
+    icon: Heart,
     title: "Community Engagement",
-    detail: "Active volunteer supporting initiatives with Vibha, as well as separate dedicated involvement with Spanda Dance.",
+    detail: "Active volunteer with Vibha & Spanda Dance. Dedicated to meaningful community impact.",
   },
 ]
 
 export function LeadershipSection() {
   return (
-    <section id="leadership" className="scroll-mt-16 bg-secondary/30">
+    <section id="leadership" className="scroll-mt-16">
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-primary">Leadership & Impact</p>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-            Leading & Contributing
+            What I lead & create
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-4xl gap-6">
+        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
           {leadershipItems.map((item) => (
-            <Card key={item.title} className="border-border bg-card">
-              <CardContent className="pt-6">
-                <div className="flex gap-4">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-                    <item.icon className="size-6" />
+            <Card key={item.title} className="border-border bg-card transition-all hover:border-primary/50 hover:shadow-sm">
+              <CardContent className="p-5">
+                <div className="flex gap-3">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+                    <item.icon className="size-5" />
                   </span>
-                  <div>
-                    <h3 className="font-semibold text-foreground">{item.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.detail}</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
+                    <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">{item.detail}</p>
                   </div>
                 </div>
               </CardContent>
