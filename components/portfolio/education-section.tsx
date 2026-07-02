@@ -18,7 +18,7 @@ export function EducationSection() {
             <CardHeader>
               <div className="flex items-start gap-4">
                 <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-                  <BookOpen className="size-6" />
+                  <BookOpen className="size-6" aria-hidden="true" />
                 </span>
                 <div>
                   <CardTitle className="text-xl">Alliance Academy for Innovation</CardTitle>
@@ -28,9 +28,9 @@ export function EducationSection() {
             </CardHeader>
             <CardContent className="space-y-3">
               <div>
-                <p className="font-medium text-foreground">Extensive Dual Enrollment Curriculum</p>
+                <p className="font-medium text-foreground">High school + college dual enrollment</p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Managing a rigorous college-level academic schedule concurrently with leading two startup ventures.
+                  Dual enrollment coursework at Middle Georgia State University while attending Alliance Academy (Class of 2027). Managing a rigorous college-level academic schedule concurrently with leading startup initiatives.
                 </p>
               </div>
             </CardContent>

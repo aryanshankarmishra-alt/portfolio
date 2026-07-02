@@ -26,12 +26,12 @@ const achievements = [
   {
     icon: Medal,
     title: "FBLA National Competitor",
-    detail: "4x National Leadership Conference qualifier. State 2nd place in Data Analysis.",
+    detail: "4x National Leadership Conference qualifier; State 2nd place in Data Analysis.",
   },
   {
     icon: Zap,
-    title: "FinTech Certified",
-    detail: "Dual enrollment at Middle Georgia State University.",
+    title: "President, FinTech Club",
+    detail: "Elected President; led growth initiatives and organized finance-focused workshops.",
   },
   {
     icon: Brain,
@@ -57,11 +57,11 @@ export function SkillsSection() {
         </div>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-2">
-          {/* Technical Skills */}
+          {/* Technical Skills card */}
           <Card className="border-border bg-card">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <Code2 className="size-5 text-primary" />
+                <Code2 className="size-5 text-primary" aria-hidden="true" />
                 <CardTitle className="text-lg">Technical Skills</CardTitle>
               </div>
             </CardHeader>
@@ -81,11 +81,11 @@ export function SkillsSection() {
             </CardContent>
           </Card>
 
-          {/* Domain Expertise */}
+          {/* Domain Expertise card */}
           <Card className="border-border bg-card">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <Database className="size-5 text-primary" />
+                <Database className="size-5 text-primary" aria-hidden="true" />
                 <CardTitle className="text-lg">Domain Expertise</CardTitle>
               </div>
             </CardHeader>
@@ -105,7 +105,7 @@ export function SkillsSection() {
           <Card className="border-border bg-card">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <Zap className="size-5 text-primary" />
+                <Zap className="size-5 text-primary" aria-hidden="true" />
                 <CardTitle className="text-lg">Soft Skills</CardTitle>
               </div>
             </CardHeader>
@@ -121,14 +121,14 @@ export function SkillsSection() {
             </CardContent>
           </Card>
 
-          {/* Achievements Grid */}
+          {/* Achievements */}
           <div className="space-y-4 lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
             {achievements.map((a) => (
               <Card key={a.title} className="border-border bg-card">
                 <CardContent className="pt-6">
                   <div className="flex gap-3">
                     <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-                      <a.icon className="size-5" />
+                      <a.icon className="size-5" aria-hidden="true" />
                     </span>
                     <div>
                       <p className="font-medium text-foreground text-sm">{a.title}</p>

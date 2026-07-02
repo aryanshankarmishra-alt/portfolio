@@ -8,7 +8,7 @@ const projects = [
     title: "Proxilytics Web Platform",
     tag: "Founder",
     description:
-      "A live business optimization platform that streamlines daily operations for local businesses through clean, reliable tooling.",
+      "Architecting a custom full-stack web platform using React and Tailwind to optimize daily operations and marketing ROI for local businesses.",
     href: "https://remote-spec-78909487.figma.site/",
     stack: ["React.js", "Data", "Operations"],
   },
@@ -36,7 +36,7 @@ export function ProjectsSection() {
             <a
               href="https://github.com/aryanshankarmishra-alt"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="font-medium text-primary underline-offset-4 hover:underline"
             >
               GitHub
@@ -74,11 +74,11 @@ export function ProjectsSection() {
                 <Button
                   size="sm"
                   nativeButton={false}
-                  render={<a href={project.href} target="_blank" rel="noreferrer" />}
+                  render={<a href={project.href} target="_blank" rel="noopener noreferrer" />}
                   className="w-full"
                 >
                   Live Demo
-                  <ArrowUpRight className="size-4" />
+                  <ArrowUpRight className="size-4" aria-hidden="true" />
                 </Button>
               </CardContent>
             </Card>

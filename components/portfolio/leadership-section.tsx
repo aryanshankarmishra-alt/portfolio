@@ -6,7 +6,12 @@ const leadershipItems = [
   {
     icon: TrendingUp,
     title: "President, FinTech Club",
-    detail: "Scaled membership by 10x & established dedicated Executive Board of Finance.",
+    detail: "Elected President — scaled membership 10x and established an Executive Board focused on finance and product demos.",
+  },
+  {
+    icon: BookOpen,
+    title: "4x FBLA National Qualifier",
+    detail: "Four-time national qualifier; State 2nd place in Data Analysis.",
   },
   {
     icon: Award,
@@ -19,19 +24,14 @@ const leadershipItems = [
     detail: "Managed chapter initiatives and fostered academic leadership culture.",
   },
   {
-    icon: BookOpen,
-    title: "4x FBLA National Qualifier",
-    detail: "State 2nd place in Data Analysis. Demonstrated excellence in competitive strategy.",
-  },
-  {
     icon: Zap,
     title: "Research & Analysis",
-    detail: "NYC Air Quality Data Analysis (Sept 2024–Mar 2025). Evaluated air quality trends following Canadian wildfires.",
+    detail: "NYC Air Quality Data Analysis (Sept 2024–Mar 2025) — evaluated air quality trends following Canadian wildfires.",
   },
   {
     icon: Heart,
     title: "Community Engagement",
-    detail: "Active volunteer with Vibha & Spanda Dance. Dedicated to meaningful community impact.",
+    detail: "Active volunteer with Vibha & Spanda Dance; committed to meaningful community impact.",
   },
 ]
 
@@ -52,7 +52,7 @@ export function LeadershipSection() {
               <CardContent className="p-5">
                 <div className="flex gap-3">
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-                    <item.icon className="size-5" />
+                    <item.icon className="size-5" aria-hidden="true" />
                   </span>
                   <div className="min-w-0 flex-1">
                     <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
