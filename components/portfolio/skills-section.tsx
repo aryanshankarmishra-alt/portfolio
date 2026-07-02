@@ -110,12 +110,12 @@ export function SkillsSection() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className="space-y-2">
+              {/* Render soft skills as compact badges for better visual balance */}
+              <div className="flex flex-wrap gap-2">
                 {softSkills.map((skill) => (
-                  <div key={skill} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span className="inline-block size-1.5 rounded-full bg-primary" />
+                  <Badge key={skill} variant="secondary" className="text-sm">
                     {skill}
-                  </div>
+                  </Badge>
                 ))}
               </div>
             </CardContent>
