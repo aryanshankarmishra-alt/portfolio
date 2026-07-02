@@ -7,7 +7,8 @@ const roles = [
     company: "Proxilytics",
     role: "Founder",
     icon: Briefcase,
-    description: "Building tech solutions that optimize daily operations for local businesses.",
+    description:
+      "Architecting a custom full-stack web platform using React and Tailwind to optimize daily operations and marketing ROI for local businesses.",
   },
   {
     company: "aivon.ai",
@@ -46,7 +47,7 @@ export function ExperienceSection() {
             >
               <CardHeader>
                 <div className="flex size-11 items-center justify-center rounded-xl bg-accent text-accent-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <item.icon className="size-5" />
+                  <item.icon className="size-5" aria-hidden="true" />
                 </div>
                 <CardTitle className="mt-4 text-lg">{item.company}</CardTitle>
                 <CardDescription className="font-medium text-primary">
