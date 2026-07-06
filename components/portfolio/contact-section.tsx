@@ -1,10 +1,9 @@
 import { Mail, ArrowUpRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { GithubIcon, LinkedinIcon } from "@/components/portfolio/brand-icons"
+import { LinkedinIcon } from "@/components/portfolio/brand-icons"
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/aryanshankarmishra-alt", icon: GithubIcon },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/aryan-a-mishra/", icon: LinkedinIcon },
   { label: "Email", href: "mailto:aryanshankarmishra@gmail.com", icon: Mail },
 ]
@@ -29,7 +28,7 @@ export function ContactSection() {
             render={<a href="mailto:aryanshankarmishra@gmail.com" />}
             className="w-full sm:w-auto"
           >
-            <Mail className="size-4" />
+            <Mail className="size-4" aria-hidden="true" />
             Contact Me
           </Button>
           <Button
@@ -40,13 +39,14 @@ export function ContactSection() {
               <a
                 href="https://drive.google.com/file/d/1xc1uXkPDqKgV8Ef3Uv2bSnPTo2vi2Ubg/view?usp=sharing"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="View resume (opens in a new tab)"
               />
             }
             className="w-full sm:w-auto"
           >
             View Resume
-            <ArrowUpRight className="size-4" />
+            <ArrowUpRight className="size-4" aria-hidden="true" />
           </Button>
         </div>
 
@@ -56,11 +56,11 @@ export function ContactSection() {
               key={s.label}
               href={s.href}
               target={s.href.startsWith("http") ? "_blank" : undefined}
-              rel={s.href.startsWith("http") ? "noreferrer" : undefined}
+              rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={s.label}
               className="flex size-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:border-primary hover:text-primary"
             >
-              <s.icon className="size-4" />
+              <s.icon className="size-4" aria-hidden="true" />
             </a>
           ))}
         </div>

@@ -2,14 +2,13 @@ import { ArrowUpRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { GithubIcon } from "@/components/portfolio/brand-icons"
 
 const projects = [
   {
     title: "Proxilytics Web Platform",
     tag: "Founder",
     description:
-      "A live business optimization platform that streamlines daily operations for local businesses through clean, reliable tooling.",
+      "Architecting a custom full-stack web platform using React and Tailwind to optimize daily operations and marketing ROI for local businesses.",
     href: "https://remote-spec-78909487.figma.site/",
     stack: ["React.js", "Data", "Operations"],
   },
@@ -30,14 +29,14 @@ export function ProjectsSection() {
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-primary">My Work</p>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-            What have I made?
+            A collection of things I have shipped. Check it out!
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-pretty text-muted-foreground">
-            A collection of things I have shipped. Check out more on{" "}
+            Explore more of my work on{" "}
             <a
               href="https://github.com/aryanshankarmishra-alt"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="font-medium text-primary underline-offset-4 hover:underline"
             >
               GitHub
@@ -72,27 +71,15 @@ export function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  <Button
-                    size="sm"
-                    nativeButton={false}
-                    render={<a href={project.href} target="_blank" rel="noreferrer" />}
-                  >
-                    Live Demo
-                    <ArrowUpRight className="size-4" />
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    nativeButton={false}
-                    render={
-                      <a href="https://github.com/aryanshankarmishra-alt" target="_blank" rel="noreferrer" />
-                    }
-                  >
-                    <GithubIcon className="size-4" />
-                    GitHub
-                  </Button>
-                </div>
+                <Button
+                  size="sm"
+                  nativeButton={false}
+                  render={<a href={project.href} target="_blank" rel="noopener noreferrer" />}
+                  className="w-full"
+                >
+                  Live Demo
+                  <ArrowUpRight className="size-4" aria-hidden="true" />
+                </Button>
               </CardContent>
             </Card>
           ))}
